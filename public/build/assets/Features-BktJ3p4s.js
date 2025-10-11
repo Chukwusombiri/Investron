@@ -1,0 +1,1 @@
+import{j as a}from"./app-DS63vWSV.js";import{F as p}from"./FeatureCard-CDeupcZZ.js";function m({features:e,layoutClasses:i,featureButtonClasses:r}){return a.jsx("div",{className:`py-12 lg:py-24 space-y-20 lg:space-y-40 ${i}`,children:e.map((s,t)=>a.jsx(p,{isEven:s.id%2==0,feature:s,buttonClasses:r},s.id))})}export{m as F};

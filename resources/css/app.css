@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Azo Sans Medium';
+    src: url('../fonts/azo-sans-medium.otf') format('otf'),       
+        url('../fonts/azo-sans-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Frank Regular';
+    src: url('../fonts/Frank-Regular.woff2') format('woff2'),
+        url('../fonts/Frank-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Frank Bold';
+    src: url('../fonts/Frank-Bold.woff2') format('woff2'),
+        url('../fonts/Frank-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Capitolium2 Regular';
+    src: url('../fonts/capitolium2-regular.woff2') format('woff2'), 
+        url('../fonts/capitolium2-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.azo-sans {
+    font-family:  'Azo Sans Medium';
+}
+
+.frank-regular {
+    font-family: 'New Frank Regular';
+}
+
+.frank-bold {
+    font-family: 'New Frank Bold';
+}
+
+.capitolium {
+    font-family: 'Capitolium2 Regular';
+}
+
+.scrollbar-button::-webkit-scrollbar-button {
+    background-color: transparent;
+    color: transparent;
+}
+
+@layer components {
+    .h1 {
+        @apply text-[42px] md:text-[76px] capitolium leading-none tracking-tight
+    }
+
+    .h2 {
+        @apply text-[32px] md:text-[54px] capitolium leading-none tracking-tight
+    }   
+    
+    .h3{
+        @apply text-[24px] md:text-[54px] capitolium leading-[26px] tracking-[-0.5px]
+    }
+
+    .article-sub-heading{
+        @apply text-[22px] md:text-[36px] capitolium leading-[24px] md:leading-[44px]
+    }
+
+    .p1 {
+        @apply text-[16px] md:text-[18px]
+    }
+
+    .p2{
+        @apply text-[14px] md:text-[16px] leading-tight md:leading-normal 
+    }
+
+    .caption {
+        @apply text-[10px] md:text-[12px] tracking-normal
+    }
+
+    .cta-heading {
+        @apply text-[28px] md:text-[42px] capitolium leading-none
+    }
+
+    .table-text {
+        @apply text-[12px] md:text-[16px]
+    }
+
+}

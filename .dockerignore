@@ -1,0 +1,33 @@
+# Git and environment
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+dist
+
+# Laravel cache and storage
+vendor
+bootstrap/cache/*.php
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/logs/*
+public/hot
+public/storage
+storage/*.key
+
+# IDE / OS junk
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+
+# Docker stuff
+docker-compose.override.yml
+*.pid
