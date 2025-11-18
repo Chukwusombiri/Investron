@@ -1,0 +1,1 @@
+import{j as r}from"./app-BWjI2u6l.js";function o({onChangeFunc:n,className:s="",...e}){return r.jsx("input",{...e,type:"checkbox",className:"rounded size-6 bg-transparent shadow-sm focus:ring-transparent"+s,onChange:n})}export{o as C};

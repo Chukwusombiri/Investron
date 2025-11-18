@@ -1,0 +1,1 @@
+import{j as i}from"./app-BWjI2u6l.js";function n({value:t,custom:r="",children:e,...a}){return i.jsx("label",{...a,className:"ml-2 block font-medium text-xs tracking-wider text-primary-50 text-wrap"+r,children:t||e})}export{n as I};

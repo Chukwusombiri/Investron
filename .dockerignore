@@ -1,9 +1,8 @@
 # Git and environment
 .git
 .gitignore
-.env
 .env.*
-!.env.example
+!.env.docker
 
 # Node
 node_modules

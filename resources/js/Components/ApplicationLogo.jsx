@@ -1,8 +1,8 @@
 import { usePage } from "@inertiajs/react";
 
 export default function ApplicationLogo(props) {    
-    
+    const { appName } = usePage().props;
     return (
-        <p {...props}>RollingsGroup</p>
+        <p {...props}>Investron</p>
     );
 }
