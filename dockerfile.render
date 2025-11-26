@@ -7,7 +7,10 @@ COPY package*.json ./
 RUN npm install
 
 # Copy frontend source and build assets
-COPY . .
+COPY resources/ ./resources/
+COPY vite.config.js tailwind.config.js postcss.config.js jsconfig.json ./
+
+# build front assets
 RUN npm run build
 
 # --- Stage 2: Build Laravel ---
@@ -26,7 +29,7 @@ COPY --from=node_builder public/build /var/www/public/build
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && composer install --no-dev --optimize-autoloader --no-interaction
 
-    
+
 # --- Stage 3: Final Image (Nginx + php-fpm combined) ---
 FROM php:8.4-fpm
 

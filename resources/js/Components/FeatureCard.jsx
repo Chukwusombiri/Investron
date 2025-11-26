@@ -1,5 +1,5 @@
 import React from 'react'
-import SecondaryLinkButton from './SecondaryLinkbutton'
+import SecondaryLinkButton from './SecondaryLinkButton'
 import Video from './Video'
 
 function FeatureCard({ feature, buttonClasses = '', isEven }) {
