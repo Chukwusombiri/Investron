@@ -11,6 +11,13 @@ COPY . .
 
 # build front assets
 RUN npm run build
+RUN ls -la
+RUN echo "=== Checking for public directory ==="
+RUN ls -la public/ 2>/dev/null || echo "No public directory found"
+RUN echo "=== Checking for build output ==="
+RUN find . -name "manifest.json" -o -name "*.js" -o -name "*.css" | head -20
+RUN echo "=== Full directory structure ==="
+RUN find . -type d -name "build" -o -name "dist" -o -name "public" | head -20
 
 # --- Stage 2: Build Laravel ---
 FROM php:8.4-fpm AS php_builder
@@ -22,7 +29,7 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /var/www
 COPY . /var/www
-COPY --from=node_builder public/build /var/www/public/build
+COPY --from=node_builder /app/public/build /var/www/public/build/
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
