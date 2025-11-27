@@ -22,14 +22,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        /* if (
+        if (
             (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
             $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') || 
             $this->app->environment('production')
         ) {
             URL::forceScheme('https');
         }
- */
         Vite::prefetch(concurrency: 3);
         Schema::defaultStringLength(191);
     }
